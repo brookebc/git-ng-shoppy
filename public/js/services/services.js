@@ -27,16 +27,17 @@ angular.module('shopNg')
 				query: { method: 'GET', isArray: true },
 				create: { method: 'POST'}
 			});
-	})
-	.factory('ShopSvc', function($resource) {
-		return $resource('api/collections/bestshop/:id',
-			{
-				id: '@_id'
-			},
-			{
-				show: { method: 'GET'},
-				edit: { method: 'PUT'},
-				delete: { method: 'DELETE'}
-			})
-		
 	});
+	// .factory('ShopSvc', function($resource) {
+	// 	return $resource('api/collections/bestshop/:id',
+	// 		{
+	// 			id: '@_id'
+	// 		},
+	// 		{
+	// 			show: { method: 'GET'},
+	// 			edit: { method: 'PUT'},
+	// 			delete: { method: 'DELETE'}
+	// 		})
+		
+	// });
+
