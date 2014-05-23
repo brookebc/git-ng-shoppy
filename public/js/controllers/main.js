@@ -34,7 +34,7 @@ angular.module('shopNg')
     $scope.newProduct = function(product) {
       $location.path('/shop');
     };
-    $scope.products = ProductSvc.query();
+    $scope.products = ShopSvc.query();
   });
 
 
