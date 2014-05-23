@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('shoppNg')
+angular.module('shopNg')
   .controller('PostsCtrl', function ($scope, $location, PostsSvc) {
 
     $scope.createPost = function() {
