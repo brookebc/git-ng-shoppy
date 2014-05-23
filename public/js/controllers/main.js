@@ -24,9 +24,10 @@ angular.module('shopNg')
   	$scope.edit = function() {
   		PostSvc.edit($scope.post);
   		$location.path('/blog');
-  	}; 
-    //this is for the blog too
-    .controller('ShopCtrl', function ($scope, $location, PostsSvc) {
+  	}
+  })
+  
+  .controller('ShopCtrl', function ($scope, $location, ProductSvc) {
 
     $scope.createProduct = function() {
       $location.path('/shop/admin');
