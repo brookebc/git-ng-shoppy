@@ -2,13 +2,15 @@
 
 <h1> i gotta make all this look real nice </h1>
 
-
-<input type="text" data-ng-model="product.name">
-<textarea data-ng-model="product.snippet" placeholder"Product snippet here"></textarea>
-<textarea data-ng-model="product.description" placeholder"Full product description here"></textarea>
-<textarea data-ng-model="product.price" placeholder"Product price"></textarea>
-<textarea data-ng-model="product.thumb" placeholder"Product thumbnail link here"></textarea>
-<textarea data-ng-model="product.large" placeholder"Product large view pic link"></textarea>
+ 
+<h1><input type="text" data-ng-model="product.name"></h1>
+<ul>
+	<li><textarea data-ng-model="product.snippet" placeholder"Product snippet here"></textarea></li>
+	<li><textarea data-ng-model="product.description" placeholder"Full product description here"></textarea></li>
+	<li><textarea data-ng-model="product.price" placeholder"Product price"></textarea></li>
+	<li><textarea data-ng-model="product.thumb" placeholder"Product thumbnail link here"></textarea></li>
+<li><textarea data-ng-model="product.large" placeholder"Product large view pic link"></textarea></li>
+</ul>
 
 <button data-ng-click="newProduct(product)">Create</button>
 
