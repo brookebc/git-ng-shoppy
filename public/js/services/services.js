@@ -28,7 +28,7 @@ angular.module('shopNg')
 				create: { method: 'POST'}
 			});
 	})
-	.factory('AdminSvc', function($resource) {
+	.factory('ShopSvc', function($resource) {
 		return $resource('api/collections/bestshop/:id',
 			{
 				id: '@_id'

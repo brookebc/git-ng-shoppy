@@ -29,11 +29,11 @@ angular.module('shopNg')
     .controller('ShopCtrl', function ($scope, $location, PostsSvc) {
 
     $scope.createProduct = function() {
-      $location.path('/shop');
+      $location.path('/shop/admin');
     };
     $scope.newProduct = function(product) {
       ProductSvc.create(product)
-      $location.path('/shop/admin');
+      $location.path('/shop');
     };
     $scope.products = ProductSvc.query();
   })
