@@ -1,6 +1,8 @@
 'use strict';
 
 angular.module('shopNg')
+
+//this is for the blog
   .controller('PostsCtrl', function ($scope, $location, PostsSvc) {
 
     $scope.createPost = function() {
@@ -22,6 +24,18 @@ angular.module('shopNg')
   	$scope.edit = function() {
   		PostSvc.edit($scope.post);
   		$location.path('/blog');
-  	};
+  	}; 
+    //this is for the blog too
+    .controller('ShopCtrl', function ($scope, $location, PostsSvc) {
+
+    $scope.createProduct = function() {
+      $location.path('/shop');
+    };
+    $scope.newProduct = function(product) {
+      ProductSvc.create(product)
+      $location.path('/shop/admin');
+    };
+    $scope.posts = ProductSvc.query();
+  })
 
   });

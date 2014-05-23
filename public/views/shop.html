@@ -1,1 +1,11 @@
 //this will be the list view of all the products that are made on the CRUD server
+
+
+<section data-ng-repeat="product in products">
+	<h2>{{product.name}}</h2>
+	<p>{{product.snippet}}</p>
+	<a href="#/product/{{product._id}}">view more</a>
+</section>
+
+<!--<button data-ng-click="createProduct()">Create New Post</button>-->
+//this should probably be create a review for a better use on this view
