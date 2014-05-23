@@ -1,6 +1,6 @@
 <!--this will be the list view of all the products that are made on the CRUD server-->
 <p> strangely there is nothing on my shop page</p>
-<section data-ng-repeat="product in products">
+<section ng-repeat="product in products">
 	<h2>{{product.name}}</h2>
 	<p>{{product.snippet}}</p>
 	<p>{{product.price}}</p>
@@ -8,5 +8,5 @@
 </section>
 
 
-<button data-ng-click="newProduct()">Admin Add new Product</button>
+<button ng-click="newProduct()">Admin Add new Product</button>
 <!--this should probably be create a review for a better use on this view-->
