@@ -25,7 +25,7 @@ angular.module('shopNg')
 		return $resource('api/collections/bestshop',
 			{},
 			{
-				// query: { method: 'GET', isArray: true },
+				query: { method: 'GET', isArray: true },
 				create: { method: 'POST'}
 			});
 	});
