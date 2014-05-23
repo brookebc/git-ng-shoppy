@@ -1,7 +1,9 @@
 <!-- this is the page that you use to "create" a new blog by entering the info in the inputs and then 'clicking' the newPost-post-->
 <div>
-	<p> Here you can create a new blog post. Click save when you are ready</p>
-<input type="text" data-ng-model="post.title" value="New Post title"></input>
-<textarea data-ng-model="post.content" value="New Post Content"></textarea>
+<h3>Directions: Here you can create a new blog post. Click save when you are ready</h3>
+<ul>
+	<li><input type="text" data-ng-model="post.title" value="New Post title"></input></li>
+	<li><textarea data-ng-model="post.content" value="New Post Content"></textarea></li>
+</ul>
 <button data-ng-click="createPost(post)">Save this created Post</button>
 </div>
