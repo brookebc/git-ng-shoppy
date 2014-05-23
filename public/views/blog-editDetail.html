@@ -1,7 +1,10 @@
-<input type="text" ng-model="post.title" value="{{post.title}}">
-<textarea ng-model="post.content">{{post.content}}</textarea>
-<button ng-click="edit()">Update Post</button> | // or save as is 
+<!-- <input type="text" data-ng-model="post.title" value="{{post.title}}">
+<textarea data-ng-model="post.content">{{post.content}}</textarea>
+<button data-ng-click="edit()">Update Post</button> | // or save as is  -->
 <!-- <button ng-click="edit()">Update Post</button>  -->
 
 <!-- need to fix the second button so that it allows you to leave it alone. Also not sure about the difference between using data-ng-model and click-->
 
+<input type="text" data-ng-model="post.title" value="{{post.title}}">
+<textarea data-ng-model="post.content">{{post.content}}</textarea>
+<button data-ng-click="edit()">Update Post</button>
