@@ -4,10 +4,12 @@ angular.module('shopNg')
 
 //this is for the blog
   .controller('PostsCtrl', function ($scope, $location, PostsSvc) {
-
+    
+// <!-- create Post is used to save the content from the post form to make a new blog post-->
     $scope.createPost = function() {
     	$location.path('/new');
     };
+    // <!-- newPost is used to allow peeps to link to the spot to make a new post-->
     $scope.newPost = function(post) {
     	PostsSvc.create(post)
     	$location.path('/blog');
