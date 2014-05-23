@@ -4,10 +4,10 @@ angular.module('shopNg')
 
 //this is for the blog
   .controller('PostsCtrl', function ($scope, $location, PostsSvc) {
-    $scope.createPost = function(post) {
+    $scope.createPost = function() {
     	$location.path('/new');
     };
-    $scope.newPost = function() {
+    $scope.newPost = function(post) {
     	PostsSvc.create(post)
     	$location.path('/blog');
     };
@@ -23,18 +23,18 @@ angular.module('shopNg')
   	$scope.edit = function() {
   		PostSvc.edit($scope.post);
   		$location.path('/blog');
-  	}
-  })
-  
-  .controller('ShopCtrl', function ($scope, $location, ShopSvc) {
-    $scope.createProduct = function() {
-       ShopSvc.create(product)
-      $location.path('/admin');
-    };
-    $scope.newProduct = function(product) {
-      $location.path('/shop');
-    };
-    $scope.products = ShopSvc.query();
+  	};
   });
+  //these are for the shop
+  // .controller('ShopCtrl', function ($scope, $location, ShopSvc) {
+  //   $scope.createProduct = function() {
+  //      ShopSvc.create(product)
+  //     $location.path('/admin');
+  //   };
+  //   $scope.newProduct = function(product) {
+  //     $location.path('/shop');
+  //   };
+  //   $scope.products = ShopSvc.query();
+  // });
 
 
