@@ -26,7 +26,7 @@ angular.module('shopNg')
   	}
   })
   
-  .controller('ShopCtrl', function ($scope, $location, ProductSvc) {
+  .controller('ShopCtrl', function ($scope, $location, ShopSvc) {
     $scope.createProduct = function() {
        ShopSvc.create(product)
       $location.path('/admin');

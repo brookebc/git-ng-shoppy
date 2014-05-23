@@ -1,4 +1,5 @@
 'use strict';
+
 angular.module('shopNg')
 	.factory('PostsSvc', function($resource) {
 		return $resource('api/collections/bestshopblog',
