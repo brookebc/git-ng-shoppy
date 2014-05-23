@@ -30,15 +30,15 @@ angular
       })
        .when('/shop', {
         templateUrl: 'views/shop.html',
-        controller: 'shopCtrl'
+        controller: 'ShopCtrl'
       })
         .when('/shop', {
         templateUrl: 'views/shop/product-detail.html',
-        controller: 'shopCtrl'
+        controller: 'ShopCtrl'
       })
        .when('/admin', {
         templateUrl: 'views/admin.html',
-        controller: 'shopCtrl'
+        controller: 'ShopCtrl'
       })
       .otherwise({
         redirectTo: '/'
