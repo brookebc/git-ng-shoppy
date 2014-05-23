@@ -1,9 +1,9 @@
 <h2>Directions: Please complete the form below to add new products to the shop. This will add product to the products array</h2>
 
 <div class="adminform">
-<h1><label>New Product Name:</label><input type="text" data-ng-model="product.name"></h1>
+<h1><label>New Product Name:</label><input type="text" placeholder="Product name">data-ng-model="product.name"></h1>
 <ul>
-	<li><label>Product snippet:</label><textarea data-ng-model="product.snippet" value="Product snippet here"></textarea></li>
+	<li><label>Product snippet:</label><textarea data-ng-model="product.snippet" placeholder="Product snippet here"></textarea></li>
 
 	<li><label>Product description:</label><textarea data-ng-model="product.description" placeholder="Full description"></textarea></li>
 
@@ -14,7 +14,7 @@
 	<li><label>Large product link:</label><textarea data-ng-model="product.large" placeholder="Link to large product image"></textarea></li>
 </ul>
 
-<button ng-submit="createProduct(product)">Create new product</button>
+<button data-ng-click="createProduct(product)">Create new product</button>
 </div>
 <!-- not sure where I will want to edit and update them -->
 <hr>
