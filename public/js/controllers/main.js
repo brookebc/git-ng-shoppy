@@ -35,7 +35,7 @@ angular.module('shopNg')
       ProductSvc.create(product)
       $location.path('/shop/admin');
     };
-    $scope.posts = ProductSvc.query();
+    $scope.products = ProductSvc.query();
   })
 
   });

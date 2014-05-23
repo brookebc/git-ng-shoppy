@@ -31,4 +31,6 @@ Have fun!!
 
 Special shoutout to @masondesu for http://github.com/masondesu/tiny-server (which comprises the node, express, mongo side of this repo)
 
+AND OF COURSE A SHOUTOUT TO CALWEB!!! https://github.com/calweb/baby-mean
+
 
