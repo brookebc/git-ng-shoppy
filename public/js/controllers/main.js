@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ngDay2App')
+angular.module('shoppNg')
   .controller('PostsCtrl', function ($scope, $location, PostsSvc) {
 
     $scope.createPost = function() {

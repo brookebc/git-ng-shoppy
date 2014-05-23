@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('ngDay2App', [
+  .module('shopNg', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
@@ -27,6 +27,14 @@ angular
       .when('/blog/:id/edit', {
         templateUrl: 'views/blog-editDetail.html',
         controller: 'PostCtrl'
+      })
+       .when('/shop', {
+        templateUrl: 'views/shop.html',
+        controller: ''
+      })
+       .when('/admin', {
+        templateUrl: 'views/admin.html',
+        controller: ''
       })
       .otherwise({
         redirectTo: '/'
