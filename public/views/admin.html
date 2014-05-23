@@ -2,18 +2,18 @@
 
 <h1> i gotta make all this look real nice </h1>
 
- 
+ <div class="adminform">
 <h1><label>Product Snippet here:</label><input type="text" data-ng-model="product.name"></h1>
 <ul>
-	<li><label>Product Snippet here:</label><textarea data-ng-model="product.snippet" placeholder"Product snippet here"></textarea></li>
-	<li><label>Product Snippet here:</label><textarea data-ng-model="product.description" placeholder"Full product description here"></textarea></li>
-	<li><label>Product Snippet here:</label><textarea data-ng-model="product.price" placeholder"Product price"></textarea></li>
-	<li><label>Product Snippet here:</label><textarea data-ng-model="product.thumb" placeholder"Product thumbnail link here"></textarea></li>
-<li><label>Product Snippet here:</label><textarea data-ng-model="product.large" placeholder"Product large view pic link"></textarea></li>
+	<li><label>Product Snippet here:</label><textarea data-ng-model="product.snippet" value="Product snippet here"></textarea></li>
+	<li><label>Product Snippet here:</label><textarea data-ng-model="product.description" placeholder="Full product description here"></textarea></li>
+	<li><label>Product Snippet here:</label><textarea data-ng-model="product.price" placeholder="Product price"></textarea></li>
+	<li><label>Product Snippet here:</label><textarea data-ng-model="product.thumb" placeholder="Product thumbnail link here"></textarea></li>
+	<li><label>Product Snippet here:</label><textarea data-ng-model="product.large" placeholder="Product large view pic link" value="Add link for the large view of the product here"></textarea></li>
 </ul>
 
 <button data-ng-click="newProduct(product)">Create</button>
-
+</div>
 <!-- not sure where I will want to edit and update them -->
 
 <p> perhaps this should also be the page to edit the products in the store</p>
