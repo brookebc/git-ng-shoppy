@@ -1,17 +1,14 @@
-<!-- this is the page that you use to "create" a new blog by entering the info in the inputs and then 'clicking' the newPost-post-->
-<!-- <div>
+<!-- this is the page that you use to "createPost" and it is on the /new view -->
+
+<div>
 	<h2>New blog post</h2>
-	<h4>Directions: Here you can create a new blog post. Click save when you are ready to submit the new post</h4>
+	<h4>Directions: Here you can create a new blog post. Click save when you are ready to submit the new post.</h4>
 	<ul>
-		<li><input type="text" data-ng-model="post.title" value="New Post title"></li>
-		<li><textarea data-ng-model="post.content" value="New Post Content"></textarea></li>
+		<li><input type="text" data-ng-model="post.title" placeholder="New Post title"></li>
+		<li><textarea data-ng-model="post.content" placeholder="New Post Content"></textarea></li>
 	</ul>
 
 	<button data-ng-click="newPost(post)">Save this created Post</button>
 </div>
- -->
-<!-- it should add the data to the array, then clear the form and also redirect you back to the blog list page so that you can see the new data-->
 
-<input type="text" data-ng-model="post.title">
-<textarea data-ng-model="post.content"></textarea>
-<button data-ng-click="newPost(post)">Create</button>
+<!-- it should add the data to the array, then clear the form and also redirect you back to the blog list page so that you can see the new data-->

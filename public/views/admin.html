@@ -1,25 +1,27 @@
-<h3>Directions: Please complete the form below to add new products to the shop. This will add product to the products array</h3>
-
 <div class="adminform">
-<h4><label>New Product Name:</label><input type="text" placeholder="Product name" data-ng-model="product.name"></h4>
-<ul>
-	<li><label>Product snippet:</label><textarea data-ng-model="product.snippet" placeholder="Product snippet here"></textarea></li>
+	<h3>Directions: Please complete the form below to add new products to the shop. This will add product to the products array</h3>
+	<h4><input type="text" placeholder="Product name" data-ng-model="product.name"></h4>
+		<ul>
+			<li><textarea data-ng-model="product.snippet" placeholder="Product snippet here"></textarea></li>
 
-	<li><label>Product description:</label><textarea data-ng-model="product.description" placeholder="Full description"></textarea></li>
+			<li><textarea data-ng-model="product.description" placeholder="Full description"></textarea></li>
 
-	<li><label>Price:</label><textarea data-ng-model="product.price" placeholder="Product price"></textarea></li>
+			<li><textarea data-ng-model="product.price" placeholder="Product price"></textarea></li>
 
-	<li><label>Thumbnail:</label><textarea data-ng-model="product.thumb" placeholder="Link to product thumbnail"></textarea></li>
+			<li><textarea data-ng-model="product.thumb" placeholder="Link to product thumbnail"></textarea></li>
 
-	<li><label>Large product link:</label><textarea data-ng-model="product.large" placeholder="Link to large product image"></textarea></li>
-</ul>
-
-<button ng-click="create()">Create new product</button>
+			<li><textarea data-ng-model="product.large" placeholder="Link to large product image"></textarea></li>
+			<button data-ng-click="newProduct(product)">Add new product</button>
+		</ul>
 </div>
-<!-- not sure where I will want to edit and update them -->
-<hr>
-<h3> perhaps this should also be the page to edit the products in the store maybe include an ngview here</h3>
 
+
+
+<!-- not sure where I will want to edit and update them -->
+<!-- <hr>
+<h3> perhaps this should also be the page to edit the products in the store maybe include an ngview here</h3> -->
+
+<P> this is on my admin html page</p>
 
 
 
