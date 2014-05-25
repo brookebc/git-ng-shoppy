@@ -29,12 +29,20 @@ angular
         controller: 'PostCtrl'
       })
       .when('/admin', {
-         templateUrl: 'views/admin.html',
-        controller: 'ShopCtrl'
+         templateUrl: 'views/product-create.html',
+        controller: 'ProductsCtrl'
       })
       .when('/shop', {
-        templateUrl: 'views/shop.html',
-        controller: 'ShopCtrl'
+        templateUrl: 'views/product-list.html',
+        controller: 'ProductsCtrl'
+      })
+      .when('/shop/:id', {
+        templateUrl: 'views/product-detail.html',
+        controller: 'ProductCtrl'
+      })
+      .when('/shop/:id/edit', {
+        templateUrl: 'views/product-editDetail.html',
+        controller: 'ProductCtrl'
       })
       .otherwise({
         redirectTo: '/'

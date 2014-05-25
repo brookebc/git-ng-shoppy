@@ -2,7 +2,6 @@
 
 angular.module('shopNg')
   .controller('PostsCtrl', function ($scope, $location, PostsSvc) {
-
     $scope.createPost = function() {
       $location.path('/new');
     };
@@ -12,6 +11,7 @@ angular.module('shopNg')
     };
     $scope.posts = PostsSvc.query();
   })
+
   .controller('PostCtrl', function($scope, $location, $routeParams, PostSvc) {
     $scope.post = PostSvc.show({ id: $routeParams.id });
     $scope.delete = function() { 
@@ -23,16 +23,28 @@ angular.module('shopNg')
       $location.path('/blog');
     };
   })
-  .controller('ShopCtrl', function ($scope, $location, ShopSvc) {
-     $scope.createProduct = function() {
-      $location.path('/shop');
-    };
 
-    $scope.newProduct = function(product) {
-      ShopSvc.create(product)
+  .controller('ProductsCtrl', function ($scope, $location, ProductsSvc) {
+     $scope.createProduct = function() {
       $location.path('/admin');
     };
-    $scope.product = ShopSvc.query();
+    $scope.newProduct = function(product) {
+      ProductsSvc.create(product)
+      $location.path('/shop');
+    };
+    $scope.products = ProductsSvc.query();
+  })
+
+  .controller('ProductCtrl', function($scope, $location, $routeParams, ProductSvc) {
+    $scope.product = ProductSvc.show({ id: $routeParams.id });
+    $scope.delete = function() { 
+      ProductSvc.delete({ id: $routeParams.id });
+      $location.path('/shop');
+    };
+    $scope.edit = function() {
+      ProductSvc.edit($scope.product);
+      $location.path('/shop');
+    };
   });
 
 

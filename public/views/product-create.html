@@ -1,0 +1,14 @@
+<!-- this is the page that you use to "createPost" and it is on the /new view -->
+
+<div>
+	<h2>New Product</h2>
+	<h4>Directions: Here you can create a new product for the shop. Click ADD when you are ready to submit the new product.</h4>
+	<ul>
+		<li><input type="text" data-ng-model="product.name" placeholder="New Product Name"></li>
+		<li><textarea data-ng-model="product.content" placeholder="New Product Content"></textarea></li>
+	</ul>
+
+	<button data-ng-click="newProduct(product)">Add product</button>
+</div>
+
+<!-- it should add the data to the array, then clear the form and also redirect you back to the blog list page so that you can see the new data-->

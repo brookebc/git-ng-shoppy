@@ -1,0 +1,6 @@
+<button data-ng-click="createProduct()">Create New Product</button>
+<section data-ng-repeat="product in products">
+	<h2>{{product.name}}</h2>
+	<p>{{product.content}}</p>
+	<a href="#/shop/{{product._id}}">view more</a>
+</section>

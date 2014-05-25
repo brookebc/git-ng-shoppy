@@ -1,13 +1,11 @@
-
 <section>
-	<li><h1>{{product.name}}</h1></li>
-	<li><p>{{product.description}}</p></li>
-	<p> this is where I will all the pics of the product</p>
-	<a href="#/blog/{{post._id}}/edit">Edit</a> | <a ng-click="delete()">Delete</a>
-
+	<button class='btn btn-success'><a href="#/shop">Back to Shop</a></button>
+	<p>this is where you will get a closer look at the blog post in all its glory</p>
+	<h1>{{product.name}}</h1>
+	<p>{{product.content}}</p>
 	<p>this is where all the product details can be seen including three images of the product which can be toggled...</p>
-
+	<p>this is where I will all the pics of the product</p>
 	<p>i will need to be able to add the toggle classes etc</p>
-
+	<a href="#/shop/{{product._id}}/edit">Edit</a> | <a ng-click="delete()">Delete</a>
 </section>
 <hr>
