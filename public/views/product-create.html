@@ -5,7 +5,13 @@
 	<h4>Directions: Here you can create a new product for the shop. Click ADD when you are ready to submit the new product.</h4>
 	<ul>
 		<li><input type="text" data-ng-model="product.name" placeholder="New Product Name"></li>
-		<li><textarea data-ng-model="product.content" placeholder="New Product Content"></textarea></li>
+		<li><textarea data-ng-model="product.snippet" placeholder="Product snippet here"></textarea></li>
+		<li><textarea data-ng-model="product.description" placeholder="Full description"></textarea></li>
+		<li><textarea data-ng-model="product.price" placeholder="Product price"></textarea></li>
+		<li><textarea data-ng-model="product.thumb" placeholder="Link to product thumbnail"></textarea></li>
+		<li><textarea data-ng-model="product.large1" placeholder="Link to large product image one"></textarea></li>
+		<li><textarea data-ng-model="product.large2" placeholder="Link to large product image two"></textarea></li>
+		<li><textarea data-ng-model="product.large3" placeholder="Link to large product image three"></textarea></li>
 	</ul>
 
 	<button data-ng-click="newProduct(product)">Add product</button>

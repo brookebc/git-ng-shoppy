@@ -1,3 +1,14 @@
-<input type="text" data-ng-model="product.name" value="{{product.name}}">
-<textarea data-ng-model="product.content">{{product.content}}</textarea>
+<h3> Use this view to update the product listing</h3>
+
+<ul>
+	<li><input type="text" data-ng-model="product.name" value="{{product.name}}"></input></li>
+<li><textarea data-ng-model="product.snippet" value="{{product.snippet}}"></textarea></li>
+<li><textarea data-ng-model="product.description" value="{{product.description}}"></textarea></li>
+<li><textarea data-ng-model="product.price" value="{{product.price}}"></textarea></li>
+<li><textarea data-ng-model="product.thumb" value="{{product.thumb}}"></textarea></li>
+<li><textarea data-ng-model="product.large1" value="{{product.large1}}"></textarea></li>
+<li><textarea data-ng-model="product.large2" value="{{product.large2}}"></textarea></li>
+<li><textarea data-ng-model="product.large3" value="{{product.large3}}"></textarea></li>
+
 <button data-ng-click="edit()">Update Product</button>
+<ul>

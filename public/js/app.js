@@ -44,11 +44,19 @@ angular
         templateUrl: 'views/product-editDetail.html',
         controller: 'ProductCtrl'
       })
+      .when('/cart', {
+         templateUrl: 'views/cart-create.html',
+        controller: 'ProductsCtrl'
+      })
+      .when('/cart/:id', {
+        templateUrl: 'views/cart-detail.html',
+        controller: 'ProductCtrl'
+      })
+      .when('/cart/:id/edit', {
+        templateUrl: 'views/cart-editDetail.html',
+        controller: 'ProductCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
   });
-
-  // .when('/shop/:id', {
-         // templateUrl: 'views/shop/product-detail.html',
-         // controller: 'ShopCtrl'
