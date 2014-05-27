@@ -11,6 +11,7 @@
 	
 	<h1>{{product.name}} : {{product.price | currency: symbol}}</h1>
 		<p>{{product.description}}</p>
+    <p>{{product.snippet}}</p>
 		<p><img ng-src="{{product.large1}}"></img></p>
 		<p><img ng-src="{{product.large2}}"></img></p>
 		<p><img ng-src="{{product.large3}}"></img></p>
@@ -20,66 +21,8 @@
 
 	</section>
 <hr>
-<br>
-<p>this is the first carousel</p>
-<carousel id="carousel">
-	<carousel-item>
-	    <div class="carousel-caption">
-			<h4>First Thumbnail label</h4>
-	    	<p>Content</p>
-	    </div>
-	    	<img ng-src="{{product.large1}}"></img>
-	</carousel-item>
-	<carousel-item>
-	  	<div class="carousel-caption">
-	  		<h4>Second Thumbnail label</h4>
-	  		<p>Content</p>
-	    </div>
-	    	<img ng-src="{{product.large2}}"></img>
-	</carousel-item>
-  <carousel-item>
-   <div class="carousel-caption">
-       <h4>Second Thumbnail label</h4>
-       <p>Content</p>
-    </div>
-    <img ng-src="{{product.large3}}"></img>
-  </carousel-item>
-</carousel>
 
-<hr>
-<p>this is the second carousel</p>
-
-<h1>Carousel</h1>
-<a ng-init="slides=[true]" ng-click="slides.push(true)">Add Slide</a>
-<div id="myCarousel" class="carousel slide">
-	<div class="carousel-inner">
-		<div class="item">
-			<img ng-src="{{product.large1}}"></img>
-      			<div class="carousel-caption">
-        			<h4>First Thumbnail label</h4> -->
-        			<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-      			<!-- </div> -->
-    	</div>
-    <div class="item active">
-      	<img ng-src="{{product.large2}}"></img>
-     		<!-- <div class="carousel-caption"> -->
-        		<!-- <h4>Second Thumbnail label</h4> -->
-        		<!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
-      		<!-- </div> -->
-    </div>
-    <div class="item" ng-repeat="item in slides">
-      	<img ng-src="{{product.large2}}"></img>
-		    <!-- <div class="carousel-caption">
-		        <h4>Generated item #{{$index+1}}</h4>
-		        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-		    </div> -->
-    </div>
-  </div>
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-</div>
-
-<!-- <div data-ng-controlleler="carouselCtrl">
+<!-- <div ng-controller="CarouselCtrl">
   <div style="height: 305px">
     <carousel interval="myInterval">
       <slide ng-repeat="slide in slides" active="slide.active">

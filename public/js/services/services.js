@@ -39,23 +39,24 @@ angular.module('shopNg')
 	 		});	
 	})
 	.factory('CartItemsSvc', function($resource) {
-		return $resource('api/collections/shoppingcart',
+		return $resource('api/collections/cart',
 			{},
 			{
-				query: { method: 'GET', isArray: true },
-				create: { method: 'POST'}
+				create: { method: 'POST'},
+				query: { method: 'GET', isArray: true }
 			});
 	})
 	.factory('CartItemSvc', function($resource) {
-		return $resource('api/collections/shoppingcart/:id',
+		return $resource('api/collections/cart',
+			{},			
 			{
 				id: '@_id'
 			},
 			{
-				show: { method: 'GET'},
+				show: { method: 'GET', isArray: true },
 				edit: { method: 'PUT'},
 				delete: { method: 'DELETE'}
-			})
+			});
 	});
-	
+
 

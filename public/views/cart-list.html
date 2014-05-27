@@ -1,17 +1,30 @@
 <p> this shows the items in the cart</p>
 
-<div class="header">
+<ul class="nav nav-pills pull-right">
+    	<li><a ng-href="#">Home</a></li>
+    	<li><a ng-href="#/shop">Shop</a></li>
+    	<li><a ng-href="#/blog">Blog</a></li>
+    	<li class="active"><a ng-href="#/cart">Cart</a></li>
+    </ul>
+<br>
+
   <h2>Checkout</h2>
-</div>
 
-<a ng-href="#/shop"><button class="btn btn-lg btn-default pull-right"> Continue Shopping</button></a>
+<div class="CartItemsCtrl">
 
-<div class="checkOut">
-<h3>Here are your items:</h3>
-  <div ng-repeat="product in products" class="purchaseItem">
-    <button ng-click="removeItem($index)" class="btn btn-sm btn-danger pull-right">Remove</button>
-    <h4>{{product.name}}</h4>
-   <!--  <p>{{product.price * product.quantity | currency}}<p> -->
+  <div>
+  <h3>Here are your items:</h3>
+    <div ng-repeat="item in items">
+      <h4>{{item.name}}</h4>
+      <img ng-src="{{item.thumb}}"></img>
+      <p>{{item.price | currency}}<p>
+     <!--  <button ng-click="removeItem($index)" class="btn btn-sm btn-danger pull-right">Remove</button> -->
+    </div>
+<!--   <h3>Total: {{total}}</h3> -->
   </div>
-  <h3>Total: {{total}}</h3>
+  <a ng-href="#/shop"><button class="btn btn-lg btn-default pull-right">Continue Shopping</button></a>
 </div>
+
+
+
+

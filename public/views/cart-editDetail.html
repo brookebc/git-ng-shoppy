@@ -1,11 +1,18 @@
-<p>this is the cart EDIT detail view</p>
-
-
 <div class="header">
   <ul class="nav nav-pills pull-right">
     <li><a ng-href="#">Home</a></li>
-    <li class="active"><a ng-href="#/shop">Shop</a></li>
     <li><a ng-href="#/blog">Blog</a></li>
+    <li><a ng-href="#/shop">Shop</a></li>
+    <li class="active"><a ng-href="#/cart">Cart</a></li>
   </ul>
   <h2>Checkout</h2>
+  <section data-ng-repeat="item in items">
+  	<ul>
+  		<li><h2>{{item.name}}</h2></li>
+  		<li><img ng-src="{{item.thumb}}"></img></li>
+  		<li><p>{{item.price | currency: symbol}}</p></li>
+  	</ul>
+
+      <a ng-href="#/cart/{{cart._id}}"><button class="btn btn-lg btn-default pull-right"><span class="glyphicon glyphicon-shopping-cart"></span>Check Out</button></a>
+  </section>
 </div>

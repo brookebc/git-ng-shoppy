@@ -1,34 +1,34 @@
 <div>
- <ul class="nav nav-pills pull-right">
-    <li><a ng-href="#">Home</a></li>
-    <li><a ng-href="#/blog">Blog</a></li>
-    <li class="active"><a ng-href="#/shop">Shop</a></li>
-    <li><a ng-href="#/cart">Cart</a></li>
-  </ul> 
- </div>
- <br>
+	<ul class="nav nav-pills pull-right">
+		<li><a ng-href="#">Home</a></li>
+		<li><a ng-href="#/blog">Blog</a></li>
+		<li class="active"><a ng-href="#/shop">Shop</a></li>
+		<li><a ng-href="#/cart">Cart</a></li>
+	</ul> 
+</div>
+<br>
 <h1>Welcome to my SHOPPY</h1>
+<!-- 
+<div class="col-md-8"> -->
 
-<!-- <div class="col-md-6"> -->
+	<section data-ng-repeat="product in products">
+		<ul class="shopfront">
+			<li><h2>{{product.name}}</h2></li>
+			<li><p>{{product.snippet}}</p></li>
+			<li><img ng-src="{{product.thumb}}"></img></li>
+			<li><p>{{product.price | currency: symbol}}</p></li>
+			<li><a href="#/shop/{{product._id}}">view more</a></li>
+		</ul>
 
-<section data-ng-repeat="product in products">
-	<ul class="shopfront">
-		<li><h2>{{product.name}}</h2></li>
-		<li><p>{{product.snippet}}</p></li>
-		<li><img ng-src="{{product.thumb}}"></img></li>
-		<li><p>{{product.price | currency: symbol}}</p></li>
-		<li><a href="#/shop/{{product._id}}">view more</a></li>
-	</ul>
-
-	<div>
-        <button ng-click="addItem(product)" class="btn btn-sm btn-success">Add to Cart</button>
-     </div>
-      <a ng-href="#/cart"><button class="btn btn-lg btn-default pull-right"><span class="glyphicon glyphicon-shopping-cart"></span> Check Out</button></a>
-</section>
-<hr>
+		<div ng-controller="CartItemsCtrl">
+	        <button ng-click="newItem(product)" class="btn btn-sm btn-success">Add to Cart</button>
+	    </div>
+	      <a ng-href="#/cart"><button class="btn btn-lg btn-default pull-right"><span class="glyphicon glyphicon-shopping-cart"></span> Check Out</button></a>
+	</section>
+	<hr>
 <!-- </div> -->
 
-<div>
+<!-- <div class="col-md-4"> -->
 	<h3>ADMIN ONLY</h3>
-<button data-ng-click="createProduct()">Create New Product</button>
-</div>
+	<button data-ng-click="createProduct()">Create New Product</button>
+<!-- </div> -->

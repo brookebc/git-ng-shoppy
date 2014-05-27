@@ -5,7 +5,8 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -48,18 +49,13 @@ angular
         templateUrl: 'views/cart-list.html',
         controller: 'CartItemsCtrl'
       })
-      .when('/newcart', {
-        templateUrl: 'views/cart-create.html',
-        controller: 'CartItemsCtrl'
-      })
-      .when('/cart/:id', {
-        templateUrl: 'views/cart-detail.html',
-        controller: 'CartItemCtrl'
-      })
-      .when('/cart/:id/edit', {
-        templateUrl: 'views/cart-editDetail.html',
-        controller: 'CartItemCtrl'
-      })
+      // .when('/newcart', {
+      //   templateUrl: 'views/cart-create.html',
+      //   controller: 'CartItemsCtrl'
+      // .when('/cart/:id/edit', {
+      //   templateUrl: 'views/cart-editDetail.html',
+      //   controller: 'CartItemsCtrl'
+      // })
       .otherwise({
         redirectTo: '/'
       });
