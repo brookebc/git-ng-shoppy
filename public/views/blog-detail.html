@@ -1,8 +1,16 @@
+<div>
+ <ul class="nav nav-pills pull-right">
+    <li><a ng-href="#">Home</a></li>
+    <li class="active"><a ng-href="#/blog">Blog</a></li>
+    <li><a ng-href="#/shop">Shop</a></li>
+    <li><a ng-href="#/cart">Cart</a></li>
+  </ul> 
+ </div>
+<br>
 <section>
-	<button class='btn btn-success'><a href="#/blog">Back to Blog</button>
-	<p>this is where you will get a closer look at the blog post in all its glory</p>
 	<h1>{{post.title}}</h1>
 	<p>{{post.content}}</p>
+	<p><img ng-src="{{post.thumb}}"></img></p>
 	<a href="#/blog/{{post._id}}/edit">Edit</a> | <a ng-click="delete()">Delete</a>
 </section>
 <hr>

@@ -1,16 +1,104 @@
-	<p>this is where all the product details can be seen including three images of the product which can be toggled...</p>
-	<p>this is where I will all the pics of the product</p>
-	<p>i will need to be able to add the toggle classes etc</p>
-
+<div>
+ <ul class="nav nav-pills pull-right">
+    <li><a ng-href="#">Home</a></li>
+    <li><a ng-href="#/blog">Blog</a></li>
+    <li class="active"><a ng-href="#/shop">Shop</a></li>
+    <li><a ng-href="#/cart">Cart</a></li>
+  </ul> 
+ </div>
 <section>
-	<button class='btn btn-success'><a href="#/shop">Back to Shop</a></button>
-	<p>this is where you will get a closer look at the blog post in all its glory</p>
-	<h1>{{product.name}}</h1>
-	<p>{{product.description}}</p>
-	<p>{{product.price}}</p>
-	<p>{{product.large1}}</p>
-	<p>{{product.large2}}</p>
-	<p>{{product.large3}}</p>
+	<button class='btn btn-success'><a  ng-href="#/shop">Back to Shop</a></button>
+	
+	<h1>{{product.name}} : {{product.price | currency: symbol}}</h1>
+		<p>{{product.description}}</p>
+		<p><img ng-src="{{product.large1}}"></img></p>
+		<p><img ng-src="{{product.large2}}"></img></p>
+		<p><img ng-src="{{product.large3}}"></img></p>
+		<p>need to be able to toggle the three images of the product</p>
+		<p>this is where you will get a closer look at the product in all its glory</p>
 	<a href="#/shop/{{product._id}}/edit">Edit</a> | <a ng-click="delete()">Delete</a>
-</section>
+
+	</section>
 <hr>
+<br>
+<p>this is the first carousel</p>
+<carousel id="carousel">
+	<carousel-item>
+	    <div class="carousel-caption">
+			<h4>First Thumbnail label</h4>
+	    	<p>Content</p>
+	    </div>
+	    	<img ng-src="{{product.large1}}"></img>
+	</carousel-item>
+	<carousel-item>
+	  	<div class="carousel-caption">
+	  		<h4>Second Thumbnail label</h4>
+	  		<p>Content</p>
+	    </div>
+	    	<img ng-src="{{product.large2}}"></img>
+	</carousel-item>
+  <carousel-item>
+   <div class="carousel-caption">
+       <h4>Second Thumbnail label</h4>
+       <p>Content</p>
+    </div>
+    <img ng-src="{{product.large3}}"></img>
+  </carousel-item>
+</carousel>
+
+<hr>
+<p>this is the second carousel</p>
+
+<h1>Carousel</h1>
+<a ng-init="slides=[true]" ng-click="slides.push(true)">Add Slide</a>
+<div id="myCarousel" class="carousel slide">
+	<div class="carousel-inner">
+		<div class="item">
+			<img ng-src="{{product.large1}}"></img>
+      			<div class="carousel-caption">
+        			<h4>First Thumbnail label</h4> -->
+        			<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      			<!-- </div> -->
+    	</div>
+    <div class="item active">
+      	<img ng-src="{{product.large2}}"></img>
+     		<!-- <div class="carousel-caption"> -->
+        		<!-- <h4>Second Thumbnail label</h4> -->
+        		<!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
+      		<!-- </div> -->
+    </div>
+    <div class="item" ng-repeat="item in slides">
+      	<img ng-src="{{product.large2}}"></img>
+		    <!-- <div class="carousel-caption">
+		        <h4>Generated item #{{$index+1}}</h4>
+		        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+		    </div> -->
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+</div>
+
+<!-- <div data-ng-controlleler="carouselCtrl">
+  <div style="height: 305px">
+    <carousel interval="myInterval">
+      <slide ng-repeat="slide in slides" active="slide.active">
+        <img ng-src="{{slide.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide {{$index}}</h4>
+          <p>{{slide.text}}</p>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
+    </div>
+    <div class="col-md-6">
+      Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
+      <br />Enter a negative number to stop the interval.
+    </div>
+  </div>
+</div> -->
+

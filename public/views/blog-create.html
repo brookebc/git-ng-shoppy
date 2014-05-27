@@ -1,14 +1,23 @@
 <!-- this is the page that you use to "createPost" and it is on the /new view -->
-
 <div>
+ <ul class="nav nav-pills pull-right">
+    <li><a ng-href="#">Home</a></li>
+    <li class="active"><a ng-href="#/blog">Blog</a></li>
+    <li><a ng-href="#/shop">Shop</a></li>
+    <li><a ng-href="#/cart">Cart</a></li>
+  </ul> 
+ </div>
+<div>
+	<br>
 	<h2>New blog post</h2>
 	<h4>Directions: Here you can create a new blog post. Click save when you are ready to submit the new post.</h4>
 	<ul>
 		<li><input type="text" data-ng-model="post.title" placeholder="New Post title"></li>
 		<li><textarea data-ng-model="post.content" placeholder="New Post Content"></textarea></li>
+		<li><input type="text" data-ng-model="post.thumb" placeholder="Thumbnail to go with post"></li>
 	</ul>
 
-	<button data-ng-click="newPost(post)">Save this new Post</button>
+	<button class='btn btn-success' data-ng-click="newPost(post)">Save this new Post</button>
 </div>
 
 <!-- it should add the data to the array, then clear the form and also redirect you back to the blog list page so that you can see the new data-->

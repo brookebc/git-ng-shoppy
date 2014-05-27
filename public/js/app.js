@@ -45,16 +45,20 @@ angular
         controller: 'ProductCtrl'
       })
       .when('/cart', {
-         templateUrl: 'views/cart-create.html',
-        controller: 'ProductsCtrl'
+        templateUrl: 'views/cart-list.html',
+        controller: 'CartItemsCtrl'
+      })
+      .when('/newcart', {
+        templateUrl: 'views/cart-create.html',
+        controller: 'CartItemsCtrl'
       })
       .when('/cart/:id', {
         templateUrl: 'views/cart-detail.html',
-        controller: 'ProductCtrl'
+        controller: 'CartItemCtrl'
       })
       .when('/cart/:id/edit', {
         templateUrl: 'views/cart-editDetail.html',
-        controller: 'ProductCtrl'
+        controller: 'CartItemCtrl'
       })
       .otherwise({
         redirectTo: '/'

@@ -10,3 +10,16 @@ a {
 .adminform {
 	list-style: none;
 }
+
+p {
+	font-family: 'Dosis', sans-serif;
+	font-weight: 400;
+}
+
+h3 {
+	font-family: 'Poiret One', cursive;
+}
+
+.shopfront {
+	list-style: none;
+}

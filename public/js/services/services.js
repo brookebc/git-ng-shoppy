@@ -37,5 +37,25 @@ angular.module('shopNg')
 				edit: { method: 'PUT'},
 	 			delete: { method: 'DELETE'}
 	 		});	
+	})
+	.factory('CartItemsSvc', function($resource) {
+		return $resource('api/collections/shoppingcart',
+			{},
+			{
+				query: { method: 'GET', isArray: true },
+				create: { method: 'POST'}
+			});
+	})
+	.factory('CartItemSvc', function($resource) {
+		return $resource('api/collections/shoppingcart/:id',
+			{
+				id: '@_id'
+			},
+			{
+				show: { method: 'GET'},
+				edit: { method: 'PUT'},
+				delete: { method: 'DELETE'}
+			})
 	});
+	
 

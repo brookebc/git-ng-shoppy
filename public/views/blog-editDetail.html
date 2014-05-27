@@ -1,10 +1,18 @@
-<!-- <input type="text" data-ng-model="post.title" value="{{post.title}}">
-<textarea data-ng-model="post.content">{{post.content}}</textarea>
-<button data-ng-click="edit()">Update Post</button> | // or save as is  -->
-<!-- <button ng-click="edit()">Update Post</button>  -->
-
-<!-- need to fix the second button so that it allows you to leave it alone. Also not sure about the difference between using data-ng-model and click-->
-
-<input type="text" data-ng-model="post.title" value="{{post.title}}">
-<textarea data-ng-model="post.content">{{post.content}}</textarea>
-<button data-ng-click="edit()">Update Post</button>
+<div>
+ <ul class="nav nav-pills pull-right">
+    <li><a ng-href="#">Home</a></li>
+    <li class="active"><a ng-href="#/blog">Blog</a></li>
+    <li><a ng-href="#/shop">Shop</a></li>
+    <li><a ng-href="#/cart">Cart</a></li>
+  </ul> 
+ </div>
+ <br>
+<h2>Directions:</h2><p>Please use this form to edit or update your blog post.</p>
+<div class="updateblog">
+	<ul>
+		<li><input type="text" data-ng-model="post.title" value="{{post.title}}"></li>
+		<li><textarea data-ng-model="post.content">{{post.content}}</textarea></li>
+		<li><input type="text" data-ng-model="post.thumb" value="{{post.thumb}}"></li>
+	</ul>
+	<button data-ng-click="edit()">Update Post</button>
+</div>

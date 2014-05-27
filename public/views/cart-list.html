@@ -1,0 +1,17 @@
+<p> this shows the items in the cart</p>
+
+<div class="header">
+  <h2>Checkout</h2>
+</div>
+
+<a ng-href="#/shop"><button class="btn btn-lg btn-default pull-right"> Continue Shopping</button></a>
+
+<div class="checkOut">
+<h3>Here are your items:</h3>
+  <div ng-repeat="product in products" class="purchaseItem">
+    <button ng-click="removeItem($index)" class="btn btn-sm btn-danger pull-right">Remove</button>
+    <h4>{{product.name}}</h4>
+   <!--  <p>{{product.price * product.quantity | currency}}<p> -->
+  </div>
+  <h3>Total: {{total}}</h3>
+</div>
