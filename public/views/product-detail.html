@@ -12,36 +12,24 @@
 	<h1>{{product.name}} : {{product.price | currency: symbol}}</h1>
 		<p>{{product.description}}</p>
     <p>{{product.snippet}}</p>
-		<p><img ng-src="{{product.large1}}"></img></p>
-		<p><img ng-src="{{product.large2}}"></img></p>
-		<p><img ng-src="{{product.large3}}"></img></p>
-		<p>need to be able to toggle the three images of the product</p>
-		<p>this is where you will get a closer look at the product in all its glory</p>
+   <p><img ng-src="{{product.large1}}"></img></p>
+<hr>	
 	<a href="#/shop/{{product._id}}/edit">Edit</a> | <a ng-click="delete()">Delete</a>
-
-	</section>
-<hr>
-
-<!-- <div ng-controller="CarouselCtrl">
-  <div style="height: 305px">
-    <carousel interval="myInterval">
-      <slide ng-repeat="slide in slides" active="slide.active">
-        <img ng-src="{{slide.image}}" style="margin:auto;">
-        <div class="carousel-caption">
-          <h4>Slide {{$index}}</h4>
-          <p>{{slide.text}}</p>
-        </div>
-      </slide>
-    </carousel>
+ </section>
+  <div class="imagecarousel">
+    <div style="height: 305px width: 400px">
+      <carousel interval='4000'>
+        <slide class="active">
+          <img ng-src="{{product.large1}}" style="margin:auto;">
+        </slide>
+        <slide>
+          <img ng-src="{{product.large2}}" style="margin:auto;">
+        </slide>
+        <slide>
+          <img ng-src="{{product.large3}}" style="margin:auto;">
+        </slide>
+      </carousel>
+    </div> 
   </div>
-  <div class="row">
-    <div class="col-md-6">
-      <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
-    </div>
-    <div class="col-md-6">
-      Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
-      <br />Enter a negative number to stop the interval.
-    </div>
-  </div>
-</div> -->
 
+<!-- </div> -->

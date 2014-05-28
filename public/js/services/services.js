@@ -47,16 +47,16 @@ angular.module('shopNg')
 			});
 	})
 	.factory('CartItemSvc', function($resource) {
-		return $resource('api/collections/cart',
-			{},			
+		return $resource('api/collections/cart',		
 			{
 				id: '@_id'
 			},
 			{
-				show: { method: 'GET', isArray: true },
+				show: { method: 'GET'},
 				edit: { method: 'PUT'},
 				delete: { method: 'DELETE'}
 			});
 	});
+	
 
 

@@ -1,29 +1,38 @@
-<p> this shows the items in the cart</p>
-
 <ul class="nav nav-pills pull-right">
-    	<li><a ng-href="#">Home</a></li>
-    	<li><a ng-href="#/shop">Shop</a></li>
-    	<li><a ng-href="#/blog">Blog</a></li>
-    	<li class="active"><a ng-href="#/cart">Cart</a></li>
-    </ul>
-<br>
-
-  <h2>Checkout</h2>
-
+	<li><a ng-href="#">Home</a></li>
+	<li><a ng-href="#/shop">Shop</a></li>
+	<li><a ng-href="#/blog">Blog</a></li>
+	<li class="active"><a ng-href="#/cart">Cart</a></li>
+</ul>
+  <br>
+<h2>Your Cart</h2>
+  <a ng-href="#/shop"><button class="btn btn-lg btn-default pull-right">Continue Shopping</button></a>
+  <br>
 <div class="CartItemsCtrl">
-
-  <div>
   <h3>Here are your items:</h3>
+
     <div ng-repeat="item in items">
       <h4>{{item.name}}</h4>
       <img ng-src="{{item.thumb}}"></img>
       <p>{{item.price | currency}}<p>
-     <!--  <button ng-click="removeItem($index)" class="btn btn-sm btn-danger pull-right">Remove</button> -->
+      <input type="number" data-ng-model="item.quantity" value="{{item.quantity}}" placeholder="1"></input>
+      <a data-ng-click="edit(item)">Update Quantity</a> | <a data-ng-click="delete(item)">Delete</a> 
+      
+      <!-- <button ng-click="removeItem($index)" class="btn btn-sm btn-danger pull-right">Remove</button> -->
     </div>
+    <hr>
 <!--   <h3>Total: {{total}}</h3> -->
-  </div>
-  <a ng-href="#/shop"><button class="btn btn-lg btn-default pull-right">Continue Shopping</button></a>
-</div>
+    <div class="carttotal">
+      <a data-ng-click="edit()">Update Quantity</a>
+      <b>Total:</b> {{item.quantity}} * {{item.price}}
+    </div>
+    
+    <div>
+    
+    </div>
+</div> 
+  <!-- <a ng-href="#/shop"><button class="btn btn-lg btn-default pull-right">Checkout</button></a> -->
+
 
 
 

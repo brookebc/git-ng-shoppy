@@ -48,14 +48,13 @@ angular
       .when('/cart', {
         templateUrl: 'views/cart-list.html',
         controller: 'CartItemsCtrl'
-      })
       // .when('/newcart', {
       //   templateUrl: 'views/cart-create.html',
       //   controller: 'CartItemsCtrl'
       // .when('/cart/:id/edit', {
       //   templateUrl: 'views/cart-editDetail.html',
       //   controller: 'CartItemsCtrl'
-      // })
+      })
       .otherwise({
         redirectTo: '/'
       });

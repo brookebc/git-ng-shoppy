@@ -69,6 +69,7 @@ angular.module('shopNg')
       $location.path('/cart');
     };
   });
+ 
 
 
 

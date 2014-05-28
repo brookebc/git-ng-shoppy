@@ -8,9 +8,8 @@
 </div>
 <br>
 <h1>Welcome to my SHOPPY</h1>
-<!-- 
-<div class="col-md-8"> -->
-
+<br>
+<a ng-href="#/cart"><button class="btn btn-lg btn-default pull-right"><span class="glyphicon glyphicon-shopping-cart"></span> Check Out</button></a>
 	<section data-ng-repeat="product in products">
 		<ul class="shopfront">
 			<li><h2>{{product.name}}</h2></li>
@@ -23,12 +22,9 @@
 		<div ng-controller="CartItemsCtrl">
 	        <button ng-click="newItem(product)" class="btn btn-sm btn-success">Add to Cart</button>
 	    </div>
-	      <a ng-href="#/cart"><button class="btn btn-lg btn-default pull-right"><span class="glyphicon glyphicon-shopping-cart"></span> Check Out</button></a>
 	</section>
-	<hr>
-<!-- </div> -->
-
-<!-- <div class="col-md-4"> -->
-	<h3>ADMIN ONLY</h3>
-	<button data-ng-click="createProduct()">Create New Product</button>
-<!-- </div> -->
+<hr>
+<footer class="pull right">
+<h3>ADMIN ONLY</h3>
+<button class="btn btn-md btn-default" data-ng-click="createProduct()">Create New Product</button>
+</footer>
