@@ -15,8 +15,12 @@
       <h4>{{item.name}}</h4>
       <img ng-src="{{item.thumb}}"></img>
       <p>{{item.price | currency}}<p>
-      <input type="number" data-ng-model="item.quantity" value="{{item.quantity}}" placeholder="1"></input>
-      <a data-ng-click="edit(item)">Update Quantity</a> | <a data-ng-click="delete(item)">Delete</a> 
+    
+    <a ng-href="#/cart/{{item._id}}/">Update Cart</a>
+
+     <!--  <input type="number" data-ng-model="item.quantity" value="{{item.quantity}}" placeholder="1"></input>
+      <a data-ng-click="edit(item)">Update Quantity</a> | <a data-ng-click="delete()">Delete</a> 
+ -->
       
       <!-- <button ng-click="removeItem($index)" class="btn btn-sm btn-danger pull-right">Remove</button> -->
     </div>

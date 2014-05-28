@@ -5,13 +5,56 @@
     <li><a ng-href="#/shop">Shop</a></li>
     <li class="active"><a ng-href="#/cart">Cart</a></li>
   </ul>
-  <h2>Checkout</h2>
-  <section data-ng-repeat="item in items">
-  	<ul>
-  		<li><h2>{{item.name}}</h2></li>
-  		<li><img ng-src="{{item.thumb}}"></img></li>
-  		<li><p>{{item.price | currency: symbol}}</p></li>
-  	</ul>
-  </section>
+  <br>
+  <h2>Edit your cart items here</h2>
+
+  <div ng-controller="CartItemCtrl">
+  <h3>Here are your items:</h3>
+
+  <ul>
+    <li><input type="text" data-ng-model="item.name" value="{{item.name}}"></li>
+    <li><textarea type="text" data-ng-model="item.price" value="{{item.price}}"></textarea></li>
+  </ul>
+  <button data-ng-click="edit()">Update Item</button>
+ </div>
+    <hr>
+
+  
+
+    <!-- div ng-repeat="item in items">
+      <h4>{{item.name}}</h4>
+      <img ng-src="{{item.thumb}}"></img>
+      <p>{{item.price | currency}}<p>
+    
+      <input type="number" data-ng-model="item.quantity" value="{{item.quantity}}" placeholder="1"></input>
+      <a data-ng-click="edit(item)">Update Quantity</a> | <a data-ng-click="delete()">Delete</a>  -->
+
+      
+      <!-- <button ng-click="removeItem($index)" class="btn btn-sm btn-danger pull-right">Remove</button> -->
+   
+
+  
+  
+      
+
+  <!-- <div class="quantitypicker">
+          <div class="btn-group" dropdown is-open="status.isopen">
+            <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+              Select Quantity <span class="caret"></span>
+            </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a ng-click="1" ng-model="{{item.quantity}}">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+          </ul>
+        </div>
+      </div>    
+
+  <a ng-click="delete()">Delete</a>
+
+  <a href="#/cart">Update Cart</a> | 
+ -->
   <a ng-href="#/cart"><button class="btn btn-lg btn-default pull-right"><span class="glyphicon glyphicon-shopping-cart"></span>Check Out</button></a>
 </div>
+
+<!-- removed = cart.splice(index, 1); -->

@@ -11,7 +11,7 @@
 <div class="updateblog">
 	<ul>
 		<li><input type="text" data-ng-model="post.title" value="{{post.title}}"></li>
-		<li><textarea data-ng-model="post.content">{{post.content}}</textarea></li>
+		<li><textarea type="text" data-ng-model="post.content" value="{{post.content}}"></textarea></li>
 		<li><input type="text" data-ng-model="post.thumb" value="{{post.thumb}}"></li>
 	</ul>
 	<button data-ng-click="edit()">Update Post</button>

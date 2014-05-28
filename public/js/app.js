@@ -52,9 +52,10 @@ angular
       // .when('/newcart', {
       //   templateUrl: 'views/cart-create.html',
       //   controller: 'CartItemsCtrl'
-      // .when('/cart/:id/edit', {
-      //   templateUrl: 'views/cart-editDetail.html',
-      //   controller: 'CartItemsCtrl'
+      })
+      .when('/cart/:id/', {
+        templateUrl: 'views/cart-editDetail.html',
+        controller: 'CartItemCtrl'
       })
       .otherwise({
         redirectTo: '/'

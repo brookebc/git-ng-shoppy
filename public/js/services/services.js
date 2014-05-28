@@ -47,7 +47,7 @@ angular.module('shopNg')
 			});
 	})
 	.factory('CartItemSvc', function($resource) {
-		return $resource('api/collections/cart',		
+		return $resource('api/collections/cart/:id',		
 			{
 				id: '@_id'
 			},
