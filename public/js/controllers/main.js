@@ -45,6 +45,10 @@ angular.module('shopNg')
       ProductSvc.edit($scope.product);
       $location.path('/shop');
     };
+    $scope.toggle = function() {
+      $scope.isVisible = !$scope.isVisible;
+    };
+      $scope.isVisible = false;
   })
 
   .controller('CartItemsCtrl', function ($scope, $location, $routeParams, CartItemsSvc) {
