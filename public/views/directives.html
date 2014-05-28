@@ -1,0 +1,10 @@
+<h1>Welcome to my fab blog</h1>
+
+<section data-ng-repeat="post in posts">
+	<h2>{{post.title}}</h2>
+	<p><img ng-src="{{post.thumb}}"></img></p>
+	<p>{{post.content}}</p>
+	<a href="#/blog/{{post._id}}">view more</a>
+</section>
+<hr>
+<button class="btn btn-lg btn-default" data-ng-click="createPost()">Create New Post</button>

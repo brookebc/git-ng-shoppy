@@ -6,7 +6,8 @@ angular
     'ngResource',
     'ngSanitize',
     'ngRoute',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'shopNg.directives'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -59,3 +60,5 @@ angular
         redirectTo: '/'
       });
   });
+
+angular.module('shopNg.directives', []);
